@@ -1,0 +1,57 @@
+.hdr {
+    
+   
+    .hdr-ctr {
+        
+       
+        
+
+        .ctr-logo{
+            background-color: #9a9a9a;
+        }
+
+        .hdr-nav{ /* nav */
+            
+            background-color: #85ccd9;
+            padding: 1em 0;
+
+            .hdr-nav-links-list { /* ul */
+                @extend %container-mxw;
+                display: flex;
+                justify-content: space-between;
+            
+                .hdr-nav-ctr-link { /* li */
+                    
+                    
+                    /*&:hover {
+                        
+                        background-color: #ff592f;
+                    }*/
+                    
+                    .hdr-nav-link { /* a */
+                        
+                            color: #16445c;
+							font-weight: 600;
+							text-decoration: none;
+							text-transform: uppercase;
+							font-size: .80em;
+                            transition: all 300ms ease;
+                             
+
+                            &:hover {
+                                color: #fff;
+                                padding: .5em 1.5em;
+                                background-color: #ff592f;
+                            }
+                    }
+
+                    .select {
+                        padding: .5em 1.5em;
+                        background-color: #ff592f;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
