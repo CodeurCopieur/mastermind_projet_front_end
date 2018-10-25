@@ -1,0 +1,77 @@
+.ftr {
+    background-color: #85ccd9;
+    padding: 1em 0;
+
+    .ctr-ftr {
+
+        .ftr-nav {
+            .ftr-nav-links-list{
+                @extend %container-mxw;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column-gap: 1.5em;
+
+                .ftr-nav-ctr-link{
+
+                    .titre-site{
+                        color: #16445c;
+                        font-weight: 400;
+                        font-size: 1em;
+                        text-transform: uppercase;
+                        letter-spacing: .01em;
+                    }
+
+                    .sous-titre-site{
+                        color: #ff592f;
+                        font-weight: 400;
+                        font-size: 1em;
+                        text-transform: uppercase;
+                        letter-spacing: .01em;
+                    }
+
+                    &:nth-child(2) {
+                        text-align: center;
+                        form{
+                            padding-right: 2.5em;
+                        
+                            input {
+                                border: none;
+                            }
+                            button {
+                                text-transform: uppercase;
+                                background-color: #16445c;
+                                color: #fff;
+                                border: none;
+                                cursor: pointer;
+                            }
+                        }    
+                    }
+
+                    &:nth-child(3) {
+                        text-align: right;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                    }
+
+                    .rs-list {
+                        display: flex;
+                        justify-content: flex-end;
+                        color: #16445c;
+
+                        .ctr-rs {
+                            cursor: pointer;
+                            &:not(:first-child) {
+                                margin-left: 1em;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
