@@ -51,14 +51,14 @@
                         text-align: right;
                         
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
 
                     }
 
                     .rs-list {
                         display: flex;
-                        justify-content: flex-end;
+                        
                         color: #16445c;
 
                         .ctr-rs {

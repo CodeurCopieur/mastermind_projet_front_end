@@ -70,15 +70,7 @@
                 
                 &:not(:first-child) {
                     margin-left: 2em;
-                }
-                /*.ctr-img-intro {
-                    height: 10em;
-                    width: 100%;
-                    background-color: #85ccd9;
-                    margin-bottom: 2em;
-                }*/
-
-                
+                } 
 
                     .col-titre {
                         color: #4f7183;
@@ -93,29 +85,23 @@
                         line-height: 1.2em;
                         text-align: left;
                         font-size: 1em;
-                    }
-                    
-                    .row-link-list {
-                        .ctr-link {
-                            
-                            background-color: #ff592f;
-                            width: 5em;
-                            text-align: center;
-                            padding: .75em 0;
-                            cursor: pointer;
+                    }                          
 
-                            .art-link {
-                                color: #fff;
-                                font-weight: 500;
-							    text-decoration: none;
-							    text-transform: uppercase;
-                                font-size: .80em;
-                                
-                            }
-                        }
+                    .art-link {
+                        color: #fff;
+                        font-weight: 500;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: .80em;
+                        background-color: #ff592f;
+                        width: 5em;
+                        text-align: center;
+                        padding: .75em 0;
+                        cursor: pointer;
+                        position: absolute;
+                        top: 15em;
                     }
-                    
-                
+
             }
         }
         
@@ -177,25 +163,19 @@
                             }
                         }
                     }
-                    .col-titre {
-                        .ctr-link {
-                            
-                            background-color: #ff592f;
-                            width: 5em;
-                            text-align: center;
-                            padding: .75em 0;
-                            cursor: pointer;
-
                             .art-link {
                                 color: #fff;
                                 font-weight: 500;
 							    text-decoration: none;
 							    text-transform: uppercase;
                                 font-size: .80em;
+                                background-color: #ff592f;
+                                width: 5em;
+                                text-align: center;
+                                padding: .75em 1em;
+                                cursor: pointer;
                                 
                             }
-                        }
-                    }
 
                 }
             }
@@ -236,9 +216,6 @@
                                     display: flex;
                                     flex-direction: column;
                                     
-                                    .name-event{
-                                        
-                                    }
                                     .date-o {
                                         color: #ff592f;
                                     }

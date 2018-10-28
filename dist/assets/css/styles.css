@@ -2,6 +2,9 @@
 .main .stn-intro .stn-ctr,
 .main .stn-arts .col-4-ctr,
 .main .stn-info .col-2-ctr,
+.main .stn-intro .ctr-intro,
+.main .stn-service-info .ctr-col-3,
+.main .stn-methods .ctr-col-3,
 .ftr .ctr-ftr .ftr-nav .ftr-nav-links-list
 {
     max-width: 70em;
@@ -576,7 +579,7 @@ table
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
+        flex-direction: column; 
 
     width: calc(100% / 4);
     margin: 1em 0;
@@ -584,12 +587,6 @@ table
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    /*.ctr-img-intro {
-                    height: 10em;
-                    width: 100%;
-                    background-color: #85ccd9;
-                    margin-bottom: 2em;
-                }*/
 }
 .main .stn-arts .col-4-ctr .ctr-art:not(:first-child)
 {
@@ -614,25 +611,24 @@ table
 
     text-align: left;
 }
-.main .stn-arts .col-4-ctr .ctr-art .row-link-list .ctr-link
+.main .stn-arts .col-4-ctr .ctr-art .art-link
 {
+    font-size: .80em;
+    font-weight: 500;
+
+    position: absolute;
+    top: 15em; 
+
     width: 5em;
     padding: .75em 0;
 
-    cursor: pointer; 
+    cursor: pointer;
     text-align: center;
-
-    background-color: #ff592f;
-}
-.main .stn-arts .col-4-ctr .ctr-art .row-link-list .ctr-link .art-link
-{
-    font-size: .80em; 
-    font-weight: 500;
-
     text-decoration: none;
     text-transform: uppercase;
 
     color: #fff;
+    background-color: #ff592f;
 }
 
 .main .stn-info
@@ -701,25 +697,21 @@ table
 {
     font-size: 1em;
 }
-.main .stn-info .col-2-ctr .ctr-about .description-col-2 .col-titre .ctr-link
+.main .stn-info .col-2-ctr .ctr-about .description-col-2 .art-link
 {
+    font-size: .80em;
+    font-weight: 500;
+
     width: 5em;
-    padding: .75em 0;
+    padding: .75em 1em;
 
     cursor: pointer; 
     text-align: center;
-
-    background-color: #ff592f;
-}
-.main .stn-info .col-2-ctr .ctr-about .description-col-2 .col-titre .ctr-link .art-link
-{
-    font-size: .80em; 
-    font-weight: 500;
-
     text-decoration: none;
     text-transform: uppercase;
 
     color: #fff;
+    background-color: #ff592f;
 }
 .main .stn-info .col-2-ctr .ctr-news
 {
@@ -793,6 +785,512 @@ table
     padding-bottom: 1em;
 }
 
+.main .stn-intro
+{
+    margin: 3em 0;
+}
+.main .stn-intro .ctr-intro
+{
+    padding: 2em 0;
+}
+.main .stn-intro .ctr-intro .titre-intro
+{
+    font-size: 1.5em;
+    font-weight: 500;
+
+    padding-bottom: 1em; 
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #85ccd9;
+}
+.main .stn-intro .ctr-intro .ctr-list-services
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+
+    padding: 1.5em 0;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    width: calc(100% / 4);
+    margin: 1em 0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre
+{
+    margin-bottom: 2em; 
+
+    text-transform: uppercase;
+
+    color: #16445c;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-file-text-o
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-user
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-bar-chart
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-comment
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-text
+{
+    font-size: 1em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .art-link
+{
+    font-size: .80em;
+    font-weight: 500;
+
+    position: absolute;
+    top: 15em; 
+
+    width: 5em;
+    padding: .75em 0;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: #ff592f;
+}
+
+.main .stn-service-info
+{
+    padding: 3em 0; 
+
+    background-color: #e7eded;
+}
+.main .stn-service-info .ctr-col-3
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 3em 0;
+}
+.main .stn-service-info .ctr-col-3 .service-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    width: calc(100% / 3);
+    margin: 1em 0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.main .stn-service-info .ctr-col-3 .service-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-service-info .ctr-col-3 .service-list:nth-child(2)
+{
+    text-align: center;
+}
+.main .stn-service-info .ctr-col-3 .service-list:nth-child(3)
+{
+    text-align: right;
+}
+.main .stn-service-info .ctr-col-3 .service-list .col-titre
+{
+    font-size: 1em;
+    font-weight: 600;
+
+    margin-bottom: 2em; 
+
+    letter-spacing: .10em;
+    text-transform: uppercase;
+
+    color: #4f7183;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list
+{
+    color: #16445c;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list:not(:last-child)
+{
+    padding-bottom: .5em;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list::before
+{
+    font-family: 'Font Awesome 4 Free';
+
+    margin-right: .5em; 
+
+    content: '\f178';
+
+    color: #ff592f;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details:first-child
+{
+    margin-bottom: 1em;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details .rep-q
+{
+    margin-left: 1em; 
+
+    text-align: left;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-description
+{
+    font-size: 1.1em; 
+
+    text-align: left;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-description:not(:last-child)
+{
+    padding-bottom: .5em;
+}
+
+.main .stn-methods
+{
+    padding: 3em 0;
+}
+.main .stn-methods .titre-intro
+{
+    font-size: 1.5em;
+    font-weight: 500;
+
+    padding-bottom: 1em; 
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #85ccd9;
+}
+.main .stn-methods .ctr-col-3
+{
+    padding: 3em 0;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+
+    width: calc(100% / 3);
+    margin: 1em 0;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list .txt-method
+{
+    font-size: 1em; 
+
+    margin-left: 1em;
+
+    text-align: left;
+}
+
+.main .stn-intro
+{
+    margin: 3em 0;
+}
+.main .stn-intro .ctr-intro
+{
+    padding: 2em 0;
+}
+.main .stn-intro .ctr-intro .titre-intro
+{
+    font-size: 1.5em;
+    font-weight: 500;
+
+    padding-bottom: 1em; 
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #85ccd9;
+}
+.main .stn-intro .ctr-intro .ctr-list-services
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+
+    padding: 1.5em 0;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    width: calc(100% / 4);
+    margin: 1em 0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre
+{
+    margin-bottom: 2em; 
+
+    text-transform: uppercase;
+
+    color: #16445c;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-file-text-o
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-user
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-bar-chart
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-titre .fa-comment
+{
+    font-size: 2em;
+
+    margin-right: .2em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .col-text
+{
+    font-size: 1em;
+}
+.main .stn-intro .ctr-intro .ctr-list-services .service-list .art-link
+{
+    font-size: .80em;
+    font-weight: 500;
+
+    position: absolute;
+    top: 15em; 
+
+    width: 5em;
+    padding: .75em 0;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: #ff592f;
+}
+
+.main .stn-service-info
+{
+    padding: 3em 0; 
+
+    background-color: #e7eded;
+}
+.main .stn-service-info .ctr-col-3
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 3em 0;
+}
+.main .stn-service-info .ctr-col-3 .service-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    width: calc(100% / 3);
+    margin: 1em 0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.main .stn-service-info .ctr-col-3 .service-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-service-info .ctr-col-3 .service-list:nth-child(2)
+{
+    text-align: center;
+}
+.main .stn-service-info .ctr-col-3 .service-list:nth-child(3)
+{
+    text-align: right;
+}
+.main .stn-service-info .ctr-col-3 .service-list .col-titre
+{
+    font-size: 1em;
+    font-weight: 600;
+
+    margin-bottom: 2em; 
+
+    letter-spacing: .10em;
+    text-transform: uppercase;
+
+    color: #4f7183;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list
+{
+    color: #16445c;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list:not(:last-child)
+{
+    padding-bottom: .5em;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-list .txt-list::before
+{
+    font-family: 'Font Awesome 4 Free';
+
+    margin-right: .5em; 
+
+    content: '\f178';
+
+    color: #ff592f;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details:first-child
+{
+    margin-bottom: 1em;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-faq .ctr-details .rep-q
+{
+    margin-left: 1em; 
+
+    text-align: left;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-description
+{
+    font-size: 1.1em; 
+
+    text-align: left;
+}
+.main .stn-service-info .ctr-col-3 .service-list .ctr-description:not(:last-child)
+{
+    padding-bottom: .5em;
+}
+
+.main .stn-methods
+{
+    padding: 3em 0;
+}
+.main .stn-methods .titre-intro
+{
+    font-size: 1.5em;
+    font-weight: 500;
+
+    padding-bottom: 1em; 
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #85ccd9;
+}
+.main .stn-methods .ctr-col-3
+{
+    padding: 3em 0;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+
+    width: calc(100% / 3);
+    margin: 1em 0;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list:not(:first-child)
+{
+    margin-left: 2em;
+}
+.main .stn-methods .ctr-col-3 .ctr-methods .methods-list .txt-method
+{
+    font-size: 1em; 
+
+    margin-left: 1em;
+
+    text-align: left;
+}
+
 .ftr
 {
     padding: 1em 0; 
@@ -855,9 +1353,9 @@ table
 
     text-align: right;
 
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -868,11 +1366,7 @@ table
     display: -ms-flexbox;
     display: flex;
 
-    color: #16445c; 
-
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    color: #16445c;
 }
 .ftr .ctr-ftr .ftr-nav .ftr-nav-links-list .ftr-nav-ctr-link .rs-list .ctr-rs
 {

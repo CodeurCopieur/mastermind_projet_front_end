@@ -1,0 +1,207 @@
+.main {
+    .stn-intro{
+        margin: 3em 0;
+            .ctr-intro {
+                padding: 2em 0;
+                @extend %container-mxw;
+                .titre-intro {
+                    color: #85ccd9;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    letter-spacing: .15em;
+                    font-size: 1.5em;
+                    padding-bottom: 1em;
+                }
+
+                .ctr-list-services {
+                    padding: 1.5em 0;
+                    display: flex;
+                    .service-list {
+
+                        margin: 1em 0;
+                        position: relative;
+                        width: calc(100% / 4);
+                        display: flex;
+                        flex-direction: column;
+
+                        &:not(:first-child) {
+                            margin-left: 2em;
+                        }
+
+                        .col-titre {
+                            color: #16445c;
+                            text-transform: uppercase;
+                            margin-bottom: 2em;
+
+                            .fa-file-text-o{
+                                font-size: 2em;
+                                margin-right: .2em;
+                            }
+
+                            .fa-user{
+                                font-size: 2em;
+                                margin-right: .2em;
+                            }
+
+                            .fa-bar-chart{
+                                font-size: 2em;
+                                margin-right: .2em;
+                            }
+
+                            .fa-comment{
+                                font-size: 2em;
+                                margin-right: .2em;
+                            }
+
+                        }
+
+                        .col-text {
+                            font-size: 1em;
+                        }
+
+                        .art-link {
+                            font-size: .80em;
+                            font-weight: 500;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: #fff;
+                            width: 5em;
+                            padding: .75em 0;
+                            cursor: pointer;
+                            text-align: center;
+                            background-color: #ff592f;
+                            position: absolute;
+                            top: 15em;
+                        }
+                    }
+                }
+
+
+            }
+        
+    }
+    .stn-service-info {
+        background-color: #e7eded;
+        padding: 3em 0;
+
+        .ctr-col-3 {
+            @extend %container-mxw;
+            display: flex;
+            
+            padding: 3em 0;
+
+            .service-list {
+                margin: 1em 0;
+                position: relative;
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                
+                &:not(:first-child) {
+                    margin-left: 2em;
+                }
+                
+                &:nth-child(2){
+                    text-align: center;
+                }
+
+                &:nth-child(3){
+                    text-align: right;
+                }
+
+                .col-titre {
+                        color: #4f7183;
+                        font-weight: 600;
+                        font-size: 1em;
+                        text-transform: uppercase;
+                        letter-spacing: .10em;
+                        margin-bottom: 2em;
+                }
+                
+                .ctr-list {
+                    .txt-list{
+                        color: #16445c;
+
+                        &:not(:last-child){
+                            padding-bottom: .5em;
+                        }
+
+                        &::before {
+                            content: "\f178";
+                            font-family: "Font Awesome 4 Free"; 
+                            color: #ff592f;
+                            margin-right: .5em;
+                        }
+                    }
+                }
+
+                .ctr-faq {
+                    .ctr-details{
+                        display: flex;
+
+
+                        &:first-child{
+                            margin-bottom: 1em;
+                        }
+                        .rep-q {
+                            text-align: left;
+                            margin-left: 1em;
+                        }
+                    }
+                }
+
+                .ctr-description{
+                    text-align: left;
+                    font-size: 1.1em;
+
+                    &:not(:last-child){
+                        padding-bottom: .5em;
+                    }
+
+                }
+                    
+             }
+        }
+    }
+
+    .stn-methods {
+        padding: 3em 0;
+
+        .titre-intro {
+            color: #85ccd9;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: .15em;
+            font-size: 1.5em;
+            padding-bottom: 1em;
+        }
+        .ctr-col-3 {
+            @extend %container-mxw;
+            padding: 3em 0;
+            .ctr-methods {
+
+                display: flex;
+
+                .methods-list{
+                    margin: 1em 0;
+                    position: relative;
+                    width: calc(100% / 3);
+                    display: flex;
+
+                    &:not(:first-child){
+                        margin-left: 2em;
+                    }
+
+                    .txt-method{
+                        text-align: left;
+                        margin-left: 1em;
+                        font-size: 1em;
+                    }
+                   
+                }
+            }
+
+
+        }
+    }
+}
