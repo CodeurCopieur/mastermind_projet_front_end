@@ -1,77 +1,156 @@
+// Styles par défaut, mobile first
 .ftr {
-    background-color: #85ccd9;
-    padding: 1em 0;
+    background-color: $bleu-clair;
+    padding: 1em;
 
-    .ctr-ftr {
+    .ftr-nav {
+        @extend %container-mxw;
+        margin-top: 0;
+        
+        .ftr-nav-links-list{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 1em;
+    
+            
 
+            .titre-site{
+                color: $bleu-fonce;
+                font-size: 1em;
+                text-transform: uppercase;
+                letter-spacing: .01em;
+                text-align: center;
+                line-height: 1.4;
+                font-family: 'Cabin', sans-serif;
+                font-weight: bold;
+            }
+
+            .sous-titre-site{
+                color: $vermillon;
+                font-size: 1em;
+                text-transform: uppercase;
+                letter-spacing: .01em;
+                text-align: center;
+                line-height: 1.4;
+                font-family: 'Cabin', sans-serif;
+            }
+            
+            form {
+                display: flex;
+                width: 100%;
+            
+                input {
+                    margin: 10px 0;
+                    height: 30px;
+                    flex-grow: 1;
+                    border: 0 none;
+                }
+                button {
+                    border: 0 none;
+                    margin: 10px 0;
+                    border-radius: 0;
+                    padding: 0 12px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    background-color: $bleu-fonce;
+                    cursor: pointer;
+                }
+            }
+
+            &:nth-child(3) {
+                
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+            }
+
+            .rs-list {
+                display: flex;
+                justify-content: flex-end;
+                align-content: center;
+                color: $bleu-fonce;
+
+                .ctr-rs {
+                    cursor: pointer;
+                    &:not(:first-child) {
+                        margin-left: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablette-portrait) {
+    .ftr {
         .ftr-nav {
+            
             .ftr-nav-links-list{
-                @extend %container-mxw;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-column-gap: 1.5em;
-
-                .ftr-nav-ctr-link{
-
-                    .titre-site{
-                        color: #16445c;
-                        font-weight: 400;
-                        font-size: 1em;
-                        text-transform: uppercase;
-                        letter-spacing: .01em;
-                    }
-
-                    .sous-titre-site{
-                        color: #ff592f;
-                        font-weight: 400;
-                        font-size: 1em;
-                        text-transform: uppercase;
-                        letter-spacing: .01em;
-                    }
-
-                    &:nth-child(2) {
-                        text-align: center;
-                        form{
-                            padding-right: 2.5em;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: unset;
+                grid-row-gap: unset;
+                grid-column-gap: 1em;
+                
+                
+                .titre-site{
+                    color: $bleu-fonce;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    text-align: left;
+                }
+                
+                .sous-titre-site{
+                    color: $vermillon;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: .01em;
+                    text-align: left;
+                }
+                
+                &:nth-child(2) {
+                    text-align: center;
+                    form{
+                        padding-right: 2.5em;
                         
-                            input {
-                                border: none;
-                            }
-                            button {
-                                text-transform: uppercase;
-                                background-color: #16445c;
-                                color: #fff;
-                                border: none;
-                                cursor: pointer;
-                            }
-                        }    
-                    }
-
-                    &:nth-child(3) {
-                        text-align: right;
-                        
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-
-                    }
-
-                    .rs-list {
-                        display: flex;
-                        
-                        color: #16445c;
-
-                        .ctr-rs {
+                        input {
+                            border: none;
+                        }
+                        button {
+                            text-transform: uppercase;
+                            background-color: $bleu-fonce;
+                            color: #fff;
+                            border: none;
                             cursor: pointer;
-                            &:not(:first-child) {
-                                margin-left: 1em;
-                            }
                         }
                     }
                 }
+                
+                &:nth-child(3) {
+                    display: flex;
+                    justify-content: flex-end;
 
+                    
+                }
+
+                
+                .rs-list {
+                    display: flex;
+                    justify-content: flex-end;
+                    color: $bleu-fonce;
+                    align-items: center;
+                    
+                    .ctr-rs {
+                        cursor: pointer;
+                        &:not(:first-child) {
+                            margin-left: 1em;
+                        }
+                    }
+                }
             }
         }
-
     }
 }
+
+@media screen and (min-width: $laptop) {}

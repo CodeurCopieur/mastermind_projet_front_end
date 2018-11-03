@@ -1,0 +1,143 @@
+/* PAGE : HOME */
+.home {
+   
+    .stn-arts {
+        background-color: #e7eded;
+        padding: 3em 0;
+        
+        .flexslider {
+            @extend %container-mxw;
+            padding: 0;
+            margin: 40px auto -20px;
+            border: 0 none;
+            border-radius: 0;
+            background: transparent;
+            
+            .slides img {
+                height: unset;
+            }
+    
+            .flex-direction-nav a {
+                background-color: $bleu-fonce;
+                top: -30px;
+                text-shadow: none;
+                color: white;
+            }
+    
+            .flex-direction-nav a:before {
+                content: '';
+            }
+            
+            .flex-direction-nav a.flex-next:before {
+                content: '';
+            }
+            
+            .flex-direction-nav .flex-prev {
+                left: calc(100% - (40px * 2) - 15px);
+            }
+            
+            .flex-direction-nav .flex-next {
+                right: 5px;
+                text-align: right;
+            }
+            
+            .flexslider:hover .flex-direction-nav .flex-prev {
+                opacity: 0.7;
+                left: calc(100% - (40px * 2) - 15px);
+            }
+            
+            .flexslider:hover .flex-direction-nav .flex-prev:hover {
+                opacity: 1;
+            }
+            
+            .flexslider:hover .flex-direction-nav .flex-next {
+                opacity: 1;
+                right: 0;
+            }
+            .flexslider:hover .flex-direction-nav .flex-next:hover {
+                opacity: 1;
+            }
+    
+            .flex-direction-nav .flex-next {
+                opacity: 1;
+            }
+            
+            .flex-direction-nav .flex-prev {
+                left: calc(100% - (40px * 2) - 15px);
+                opacity: 1;
+            }
+    
+            .flex-direction-nav .flex-disabled {
+                z-index: 1;
+                cursor: default;
+                opacity: 1 !important;
+            }
+        }
+        
+        .col-4-ctr {
+            display: flex;
+            
+            .ctr-art {
+                margin: 1em 0;
+                position: relative;
+                padding: 0.5em;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                
+                .ctr-art__img {
+                    width: 100%;
+                    margin: 0 auto 1em;
+                }
+
+                .col-titre {
+                    color: #4f7183;
+                    font-weight: 600;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: .10em;
+                    font-family: 'Cabin', sans-serif;
+                }
+
+                .col-text {
+                    margin: 1em 0;
+                    line-height: 1.2em;
+                    text-align: left;
+                    font-size: 1em;
+                    min-height: 160px;
+                }
+
+                .art-link {
+                    color: #fff;
+                    font-weight: 500;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: .80em;
+                    background-color: $vermillon;
+                    width: 5em;
+                    text-align: center;
+                    padding: .75em 0;
+                    cursor: pointer;
+                    font-family: 'Cabin', sans-serif;
+                    position: relative;
+
+				
+                    &::before{
+                        position: absolute;
+                        z-index: -1;
+                        top: 0px;
+                        right: -1px;
+                        width: 5em;
+                        height: 1.1em;
+                        padding: .75em 0;
+                        content: '';
+                        background-color: #c7bebe;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+/* PAGE : HOME */

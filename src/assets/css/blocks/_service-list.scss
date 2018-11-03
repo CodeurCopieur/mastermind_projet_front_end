@@ -1,0 +1,151 @@
+// Styles par défaut, mobile first
+.ctr-list-services {
+	display: flex;
+	padding: 1.5em 0;
+	flex-direction: column;
+
+	.service-list {
+		
+		margin: 1em 0;
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		
+		.col-titre {
+			color: $bleu-fonce;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			font-family: 'Cabin', sans-serif;
+			
+			
+			.fa-file-text-o{
+				font-size: 2em;
+				margin-right: .2em;
+			}
+			
+			.fa-user{
+				font-size: 2em;
+				margin-right: .2em;
+			}
+			
+			.fa-bar-chart{
+				font-size: 2em;
+				margin-right: .2em;
+			}
+			
+			.fa-comment{
+				font-size: 2em;
+				margin-right: .2em;
+			}
+			
+		}
+		
+		.col-text {
+			font-size: 1em;
+			padding: 1em 0;
+		}
+		
+		.art-link {
+			position: initial;
+			font-size: .80em;
+			font-weight: 500;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #fff;
+			width: 5em;
+			padding: .75em 0;
+			cursor: pointer;
+			text-align: center;
+			background-color: $vermillon;
+			position: relative;
+
+				
+				&::before{
+					position: absolute;
+					z-index: -1;
+					top: 1.2px;
+					right: -1.2px;
+					width: 5em;
+					height: 1.1em;
+					padding: .75em 0;
+					content: '';
+					background-color: #c7bebe;
+				}
+
+		}
+	}
+}
+
+@media screen and (min-width: $tablette-portrait) {
+	
+	
+	.ctr-list-services {
+		padding: 1.5em 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 1em;
+		
+		.service-list {
+			
+			margin: 1em 0;
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			.col-titre {
+				color: $bleu-fonce;
+				text-transform: uppercase;
+				margin-bottom: 1em;
+				font-family: 'Cabin', sans-serif;
+				
+				.fa-file-text-o{
+					font-size: 2em;
+					margin-right: .2em;
+				}
+				
+				.fa-user{
+					font-size: 2em;
+					margin-right: .2em;
+				}
+				
+				.fa-bar-chart{
+					font-size: 2em;
+					margin-right: .2em;
+				}
+				
+				.fa-comment{
+					font-size: 2em;
+					margin-right: .2em;
+				}
+				
+			}
+			
+			.col-text {
+				font-size: 1em;
+				padding: 1em 0;
+			}
+			
+			.art-link {
+				font-size: .80em;
+				font-weight: 500;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #fff;
+				width: 5em;
+				padding: .75em 0;
+				cursor: pointer;
+				text-align: center;
+				background-color: $vermillon;
+				font-family: 'Cabin', sans-serif;
+				position: relative;
+			
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+.stn-contact {
+    margin: 3em 0;
+
+    .ctr-contact{
+        padding: 0em 1em;
+        @extend %container-mxw;
+
+        .titre-intro {
+            color: $bleu-clair;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.5em;
+            padding-bottom: 1em;
+            font-family: 'Cabin', sans-serif;
+        }
+        .ctr-col-2{
+
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 1.5em;
+            .ctr-form{
+                .txt-contact{
+                    margin-bottom: 2em;
+                    .color-s {
+                        color: $vermillon;
+                    }
+                }
+
+                .color-s {
+                    color: $vermillon;
+                }
+
+                input[name=name], [name=email], [name=phone], [name=message] {
+                    width: 70%;
+                    margin-bottom: 2em;
+                }
+
+                label {
+                    padding-bottom: 2em;
+                }
+
+                input[type=submit]{
+                    font-size: .90em;
+                        font-weight: 500;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #fff;
+                        width: 8em;
+                        height: 2.7em;
+                        cursor: pointer;
+                        text-align: center;
+                        background-color: $vermillon;
+                        border: none;
+                        font-family: 'Cabin', sans-serif;
+                }
+
+
+            }
+
+            .ctr-maps{
+                .ctr-adresse {
+                    display: flex;
+                    margin: 2em 0;
+                    .crt-adresse-1{
+                        width: $column-width * 3/2;
+                        &:not(:first-child) {
+                            margin-left: 2em;
+                        }
+
+                        .col-titre{
+                            color: $bleu-fonce;
+                            text-transform: uppercase;
+                            margin-bottom: 2em;
+
+                        }
+
+                        .txt-details {
+                            line-height: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $tablette-portrait) {
+    .stn-contact {
+        .ctr-contact{
+            padding: 2em 1em;
+            .ctr-col-2{
+    
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 1.5em;
+                .ctr-form{
+                    .txt-contact{
+                        margin-bottom: 2em;
+                        .color-s {
+                            color: $vermillon;
+                        }
+                    }
+    
+                }
+    
+                .ctr-maps{
+                    .ctr-adresse {
+                        display: flex;
+                        margin: 2em 0;
+                        .crt-adresse-1{
+                            width: $column-width * 3/2;
+                            &:not(:first-child) {
+                                margin-left: 2em;
+                            }
+    
+                            .col-titre{
+                                color: $bleu-fonce;
+                                text-transform: uppercase;
+                                margin-bottom: 2em;
+    
+                            }
+    
+                            .txt-details {
+                                line-height: 1.2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

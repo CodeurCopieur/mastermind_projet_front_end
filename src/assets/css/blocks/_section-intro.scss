@@ -1,0 +1,20 @@
+// Styles par défaut, mobile first
+.stn-intro {
+	@extend %container-mxw;
+	padding: 0 1em;
+
+	.titre-intro {
+		@extend %section-title-small;
+		
+	}
+}
+
+@media screen and (min-width: $tablette-portrait) {
+	.stn-intro {
+		.titre-intro {
+			@extend %section-title-large;
+		}
+	}
+}
+
+@media screen and (min-width: $laptop) {}

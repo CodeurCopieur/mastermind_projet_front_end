@@ -1,4 +1,23 @@
+// Dimensions par défaut pour une section de page
 %container-mxw {
-	max-width: 70em;
-	margin: 0 auto;
+	max-width: $laptop;
+	margin: 5em auto 0;
+}
+
+// Styles par défaut pour un titre de section
+%section-title-small {
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+	color: $bleu-clair;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: 'Cabin', sans-serif;
+}
+
+@media screen and (min-width: $tablette-portrait) {
+	// Styles pour résolution supérieures à [] pour un titre de section
+	%section-title-large {
+		font-size: 1.5em;
+		padding-bottom: 1em;
+	}
 }

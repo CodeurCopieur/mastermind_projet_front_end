@@ -4,62 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <title>Mastermind - contact</title>
+    <title>Mastermind - Contact</title>
 </head>
 <body>
     <!-- HEADER:START -->
-        <header class="hdr">
-            <div class="hdr-ctr">
-                <div class="ctr-logo"><img src="" alt=""></div>
-                <nav class="hdr-nav">
-                    <ul class="hdr-nav-links-list">
-                        <li class="hdr-nav-ctr-link"><a href="home.html" class="hdr-nav-link">home</a></li>
-                        <li class="hdr-nav-ctr-link"><a href="#" class="hdr-nav-link">about</a></li>
-                        <li class="hdr-nav-ctr-link"><a href="#" class="hdr-nav-link">projects</a></li>
-                        <li class="hdr-nav-ctr-link"><a href="services.html" class="hdr-nav-link select">services</a></li>
-                        <li class="hdr-nav-ctr-link"><a href="contact.html" class="hdr-nav-link">contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <header class="hdr">
+        <img class="hdr-nav-logo" src="img/Working-towards-excellence.png">
+        <input name="hdr-nav-toggle-cb" id="hdr-nav-toggle-cb" class="hdr-nav-toggle-cb" type="checkbox">
+        <nav class="hdr-nav">
+            <label for="hdr-nav-toggle-cb" class="hdr-nav-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <ul class="hdr-nav-links-list">
+                <li class="hdr-nav-ctr-link"><a href="home.html" class="hdr-nav-link">home</a></li>
+                <li class="hdr-nav-ctr-link">
+                        <a href="#" class="hdr-nav-link">about</a>
+                        <ul class="hidden">
+                                <li><a href="#">our history</a></li>
+                                <li><a href="#">our clients</a></li>
+                                <li><a href="#">faqs</a></li>
+                        </ul>
+                    </li>
+                </li>
+                <li class="hdr-nav-ctr-link"><a href="#" class="hdr-nav-link">projects</a></li>
+                <li class="hdr-nav-ctr-link"><a href="services.html" class="hdr-nav-link">services</a></li>
+                <li class="hdr-nav-ctr-link select"><a href="contact.html" class="hdr-nav-link">contacts</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- HEADER:END -->
      <!-- MAIN:START -->
-     <main class="main">
+     <main class="contact">
+
+        <!-- SECTION:START -->
+
+        <section class="stn-contact">
+            <div class="ctr-contact">
+                <h1 class="titre-intro">contact us</h1>
+
+                <div class="ctr-col-2">
+                    <div class="ctr-form">
+                        <p class="txt-contact">
+                                Use this form to contact us.<br/>
+                                Please note that all fields with an <span class="color-s">*</span> are required.
+                        </p>
+
+                        <form method="post" action="traitement.php">
+                            <p>
+                                <label for="name">Name <span class="color-s">*</span> </label><br />
+                                <input type="text" name="name" id="name" /><br />
+                            </p>
+
+                            <p>
+                                <label for="email">Email <span class="color-s">*</span> </label><br />
+                                <input type="text" name="email" id="email" /><br />
+                            </p>
+
+                            <p>
+                                    <label for="phone">Phone  </label><br />
+                                    <input type="text" name="phone" id="phone" /><br />
+                                </p>
+
+                                <p>
+                                    <label for="message">
+                                    Message <span class="color-s">*</span>
+                                    </label>
+                                    <br />
+                                    
+                                    <textarea name="message" id="message" rows="5" cols="39">
+                                   
+                                    </textarea>       
+                                </p>
+
+                                <input type="submit" value="send">
+                        </form>
+                    </div>
+                    <div class="ctr-maps">
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4201968474135!2d-0.10696698429142007!3d51.52385237963789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b503cfe493d%3A0xe0c44614040c502f!2s1+Sekforde+St%2C+Clerkenwell%2C+London+EC1R+0BE%2C+Royaume-Uni!5e0!3m2!1sfr!2sfr!4v1540769645491" width="430" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <div class="ctr-adresse">
+                            <div class="crt-adresse-1">
+                                    <h3 class="col-titre">us headquarters</h3>
+                                    <p class="txt-details">
+                                        4000 Civic Center Drive<br/>
+                                        Suite 500<br/>
+                                        San Rafael, CA 94903<br/>
+                                        USA<br/>
+                                        Phone +44(0)845 299 8199
+                                    </p>
+
+                            </div>
+                            <div class="crt-adresse-1">
+                                    <h3 class="col-titre">uk offices</h3>
+                                    <p class="txt-details">
+                                            1 Sekforde Street, Clerkenwell,<br/>
+                                            London, EC1R 0BE, <br/>
+                                            United Kingdom<br/>
+                                            Phone +44(0)845 299 8199<br/>
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION:END -->
+
+        <section class="stn-leaders">
+            <div class="ctr-leaders-infos">
+                <h1 class="titre-intro">our team leaders</h1>
+                <p class="details-leaders">Get your mouse over the pictures to know more about our team leaders.</p>
+                <ul class="ctr-list">
+                    <li class="img-list">
+                        <img src="img/page2-img3.png" class="img-lead" alt="">
+                        <span class="ctr-details-info">
+                            <p class="name-lead">chandler vancova</p>
+                            <p class="post-lead">marketing manager</p>
+                        </span>
+                    </li>
+                    <li class="img-list">
+                            <img src="img/page2-img4.png" class="img-lead" alt="">
+                            <span class="ctr-details-info">
+                                    <p class="name-lead">chandler vancova</p>
+                                    <p class="post-lead">marketing manager</p>
+                            </span>
+                    </li>
+                    <li class="img-list">
+                            <img src="img/page2-img5.png" class="img-lead" alt="">
+                            <span class="ctr-details-info">
+                                    <p class="name-lead">chandler vancova</p>
+                                    <p class="post-lead">marketing manager</p>
+                            </span>
+                    </li>
+                    <li class="img-list">
+                            <img src="img/page2-img6.png" class="img-lead" alt="">
+                            <span class="ctr-details-info">
+                                    <p class="name-lead">chandler vancova</p>
+                                    <p class="post-lead">marketing manager</p>
+                            </span>
+                    </li>
+                    <li class="img-list">
+                            <img src="img/page2-img7.png" class="img-lead" alt="">
+                            <span class="ctr-details-info">
+                                    <p class="name-lead">chandler vancova</p>
+                                    <p class="post-lead">marketing manager</p>
+                            </span>
+                    </li>
+                    <li class="img-list">
+                            <img src="img/page2-img8.png" class="img-lead" alt="">
+                            <span class="ctr-details-info">
+                                    <p class="name-lead">chandler vancova</p>
+                                    <p class="post-lead">marketing manager</p>
+                            </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
     </main>
     <!-- MAIN:END -->
 
-        <!-- FOOTER:START -->
-        <footer class="ftr">
-            <div class="ctr-ftr">
-                <nav class="ftr-nav">
-                    <ul class="ftr-nav-links-list">
-                        <li class="ftr-nav-ctr-link">
-                            <h4 class="titre-site">MASTERMIND © 2018</h4>
-                            <h4 class="sous-titre-site">PRIVACY POLICY</h4>
-                        </li>
-                        <li class="ftr-nav-ctr-link">
-                            <h4 class="titre-site">SUBSCRIBE TO OUR NEWSLETTER:</h4>
-                            <form method="post" action="#">
-                                <input type="text" name="pseudo" />
-                                <button>ok</button>
-                             </form>
-                             
-                        </li>
-                        <li class="ftr-nav-ctr-link">
-                            <ul class="rs-list">
-                                <li class="ctr-rs"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                                <li class="ctr-rs"><i class="fa fa-rss" aria-hidden="true"></i></li>
-                                <li class="ctr-rs"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                            </ul>
-                        </li>
+    <!-- FOOTER:START -->
+    <footer class="ftr">
+        <nav class="ftr-nav">
+            <ul class="ftr-nav-links-list">
+                <li class="ftr-nav-ctr-link">
+                    <h4 class="titre-site">MASTERMIND © 2018</h4>
+                    <h4 class="sous-titre-site">PRIVACY POLICY</h4>
+                </li>
+                <li class="ftr-nav-ctr-link">
+                    <h4 class="titre-site">SUBSCRIBE TO OUR NEWSLETTER:</h4>
+                    <form method="post" action="#">
+                        <input type="text" name="pseudo" placeholder=" your email address"/>
+                        <button>ok</button>
+                     </form>
+
+                </li>
+                <li class="ftr-nav-ctr-link">
+                    <ul class="rs-list">
+                        <li class="ctr-rs"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                        <li class="ctr-rs"><i class="fa fa-rss" aria-hidden="true"></i></li>
+                        <li class="ctr-rs"><i class="fa fa-twitter" aria-hidden="true"></i></li>
                     </ul>
-                </nav>
-            </div>
-        </footer>
+                </li>
+            </ul>
+        </nav>
+    </footer>
     <!-- FOOTER:END -->
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script defer src="assets/js/vendor/jquery.flexslider.js"></script>
+
+    <!-- MAIN SCRIPT -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

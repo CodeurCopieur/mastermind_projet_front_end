@@ -3,6 +3,7 @@ var _ = require('lodash');
 
 // Include plugins
 var plugins = require('gulp-load-plugins')(); // tous les plugins de package.json
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
 // Task configuration for delivering development or production versions, refactored in dedicated files
@@ -50,10 +51,12 @@ var prodConfig = _.merge({}, baseConfig, {
 gulp.task(devConfig.css.task, function () {
     return gulp.src(devConfig.source + '/assets/css/styles.scss')
         /* ici les plugins Gulp à executer */
+        .pipe(sourcemaps.init())
         .pipe(plugins.sass().on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer.apply(null, devConfig.css.autoprefixer.version))
         .pipe(plugins.csscomb())
         .pipe(plugins.rename(devConfig.css.name))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(devConfig.path))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -64,11 +67,13 @@ gulp.task(devConfig.css.task, function () {
 gulp.task(prodConfig.css.task, function () {
     return gulp.src(prodConfig.source + '/assets/css/styles.scss')
         /* ici les plugins Gulp à executer */
+        .pipe(sourcemaps.init())
         .pipe(plugins.plumberNotifier())
         .pipe(plugins.sass())
         .pipe(plugins.autoprefixer.apply(null, prodConfig.css.autoprefixer.version))
         .pipe(plugins.csso())
         .pipe(plugins.rename(prodConfig.css.name))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(prodConfig.path)
         .pipe(browserSync.reload({stream: true})));
 });
@@ -77,7 +82,7 @@ gulp.task(prodConfig.css.task, function () {
  *
  */
 gulp.task('js', function () {
-    return gulp.src(devConfig.source + '/assets/js/main.js')
+    return gulp.src(devConfig.source + '/assets/js/**/*.js')
         .pipe(plugins.uglify())
         .pipe(gulp.dest(devConfig.destination + '/assets/js/'))
         .pipe(browserSync.reload({stream: true}));
@@ -88,7 +93,11 @@ gulp.task('js', function () {
 gulp.task('serve',function() {
 
     browserSync.init({
-        server: "dist"
+        server: "dist",
+        notify: true,
+        port: 8001,
+        open: "local",
+        startPath: "/home.html"
     });
 
     gulp.watch([devConfig.source + '/assets/css/**/*.scss'], [devConfig.css.task]).on('change', browserSync.reload);

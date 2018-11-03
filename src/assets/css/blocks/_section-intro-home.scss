@@ -1,0 +1,99 @@
+// Styles par défaut, mobile first
+.stn-intro{
+    margin: 5em auto;
+    
+    .stn-ctr {
+        @extend %container-mxw;
+        
+        display: grid;
+        grid-template-rows: 5fr 2fr;
+        grid-column-gap: 1.5em;
+        padding: 0;
+        
+        
+        .titre-intro {
+            font-size: 1.5em;
+            padding-bottom: 1em;
+            font-family: 'Cabin', sans-serif;
+        }
+        
+        .ctr-list {
+            padding: 1.5em 0;
+            
+            .txt-list   {
+                color: $bleu-fonce;
+                
+                &:not(:last-child){
+                    padding-bottom: .5em;
+                }
+                
+                &::before {
+                    content: "\f0a4";
+                    font-family: "Font Awesome 5 Free";
+                    color: $vermillon;
+                    margin-right: .5em;
+                }
+            }
+        }
+
+        .ctr-description {
+            line-height: 20px;
+            font-size: inherit;
+        }
+        
+        .ctr-img-intro {
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (min-width: $tablette-portrait) {
+    .stn-intro{
+        margin: 7em auto 0;
+    
+        .stn-ctr {
+            display: grid;
+            grid-template-columns: 5fr 2fr;
+            grid-column-gap: 1.5em;
+            padding: 0;
+        
+        
+            .titre-intro {
+                font-size: 1.5em;
+                padding-bottom: 1em;
+            }
+        
+            .ctr-list {
+                padding: 1.5em 0;
+        
+                .txt-list   {
+                    color: $bleu-fonce;
+            
+                    &:not(:last-child){
+                        padding-bottom: .5em;
+                    }
+        
+                    &::before {
+                        content: "\f0a4";
+                        font-family: "Font Awesome 5 Free";
+                        color: $vermillon;
+                        margin-right: .5em;
+                    }
+                }
+        
+                .ctr-description {
+                    line-height: 20px;
+                    font-size: inherit;
+                }
+            }
+        
+            .ctr-img-intro {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {}
+
+

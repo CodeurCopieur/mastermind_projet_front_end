@@ -1,0 +1,76 @@
+// Styles par défaut, mobile first
+.stn-methods {
+    margin: 0;
+    
+    .titre-intro {
+        @extend %section-title-small;
+        font-size: 1.5em;
+        font-family: 'Cabin', sans-serif;
+    }
+
+    .ctr-col-3 {
+        @extend %container-mxw;
+        margin: 2em auto;
+        padding: 1em 1em;
+        
+        .ctr-methods {
+
+            display: flex;
+            flex-direction: column;
+            
+            .methods-list{
+                margin: 1em 0;
+                position: relative;
+                width: 100%;
+                display: flex;
+
+                
+                .txt-method{
+                    text-align: left;
+                    font-size: 1em;
+                    margin-left: .5em;
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablette-portrait) {
+    
+    .stn-methods {
+        margin: 5em 0;
+    
+        .titre-intro {
+            @extend %section-title-large;
+            font-family: 'Cabin', sans-serif;
+        }
+        
+        .ctr-col-3 {
+            padding: 0 1em;
+            
+            .ctr-methods {
+    
+                display: flex;
+                flex-direction: row;
+    
+                .methods-list{
+                    //margin: 1em 1em;
+                    width: $column-width;
+                    line-height: 1.2em;
+    
+                    &:not(:first-child){
+                        margin: 1em 1em;
+                    }
+    
+                    .txt-method{
+                        margin-left: 1em;
+                    }
+                
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {}

@@ -1,0 +1,111 @@
+// Styles par défaut, mobile first
+.stn-service-info {
+	background-color: #e7eded;
+	margin: 0;
+	padding: 6em 1em;
+	display: flex;
+	
+
+	.service-list {
+		margin: 1em 0;
+		position: relative;
+		width: $column-width;
+		display: flex;
+		flex-direction: column;
+		
+		&:nth-child(2){
+			text-align: center;
+			padding-top: 1em;
+		}
+		
+		&:nth-child(3){
+			text-align: right;
+			padding-top: 1em;
+		}
+		
+		.col-titre {
+			color: $bleu-clair;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-family: 'Cabin', sans-serif;
+			font-size: 1.5em;
+			padding-bottom: 1em;
+		}
+		
+		.ctr-list {
+			.txt-list{
+				color: $bleu-fonce;
+				
+				&:not(:last-child){
+					padding-bottom: .5em;
+				}
+				
+				.fa-long-arrow-right {
+					color: $vermillon;
+					margin-right: .5em;
+				}
+			}
+		}
+		
+		.ctr-faq {
+			.ctr-details{
+				display: flex;
+				
+				
+				&:first-child{
+					margin-bottom: 1em;
+				}
+				.rep-q {
+					text-align: left;
+					margin-left: 1em;
+				}
+			}
+		}
+		
+		.ctr-description{
+			text-align: left;
+			font-size: 1.1em;
+			
+			&:not(:last-child){
+				padding-bottom: .5em;
+			}
+		}
+	}
+
+	.ctr-list-services {
+		@extend %container-mxw;
+		margin: 0 auto;
+		.service-list {
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (min-width: $tablette-portrait) {
+	.stn-service-info {
+		.ctr-list-services {
+			grid-template-columns: repeat(3, 1fr);
+			
+			.service-list {
+				width: 100%;
+				margin: 0;
+
+				&:nth-child(2){
+					padding-top: 0em;
+				}
+				
+				&:nth-child(3){
+
+					padding-top: 0em;
+				}
+
+				.col-titre {
+					font-family: 'Cabin', sans-serif;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $laptop) {}
