@@ -1,4 +1,4 @@
-# mastermind_projet_front_end
+# Mastermind Projet Front End
  L’intégration de 3 pages d'un nouveau Projet Mastermind responsive.
  
  Page Home : https://codepen.io/codwerk/pen/EOdpYx,
